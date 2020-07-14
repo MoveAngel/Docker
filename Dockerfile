@@ -61,3 +61,9 @@ RUN python3 -m ensurepip \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache
+
+ADD https://raw.githubusercontent.com/MoveAngel/One4uBot/sql-extended/requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+CMD ["python3"]
