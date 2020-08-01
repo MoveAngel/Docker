@@ -1,5 +1,5 @@
 FROM alpine:edge
-LABEL maintainer "MoveAngel <moveangel29@gmail.com>"
+LABEL maintainer "MoveAngel <moveangel@outlook.com>"
 
 RUN sed -e 's;^#http\(.*\)/edge/community;http\1/edge/community;g' -i /etc/apk/repositories
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
@@ -51,7 +51,7 @@ RUN apk add --no-cache=true --update \
     nodejs \
     freetype-dev
 
-RUN git config --global user.email "moveangel29@gmail.com"
+RUN git config --global user.email "moveangel@outlook.com"
 RUN git config --global user.name "MoveAngel"
 
 RUN python3 -m ensurepip \
